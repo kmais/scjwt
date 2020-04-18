@@ -1,0 +1,27 @@
+{
+  "name": "scjwt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmais/scjwt.git"
+  },
+  "author": "kenny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmais/scjwt/issues"
+  },
+  "homepage": "https://github.com/kmais/scjwt#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.6",
+    "nodemon": "^2.0.3",
+    "twilio": "^3.42.2"
+  }
+}
