@@ -26,7 +26,7 @@ app.get("/jwt/:id/:room/:name", function (req, res) {
   console.log(accessToken);
 
   // Set the Identity of this token
-  accessToken.identity = "req.params.name";
+  accessToken.identity = req.params.name;
 
   // Grant access to Video
   var grant = new VideoGrant();
