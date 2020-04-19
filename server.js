@@ -17,6 +17,7 @@ accessToken.identity = "example-user";
 var grant = new VideoGrant();
 grant.room = "cool room";
 accessToken.addGrant(grant);
+console.log("hello");
 
 // Serialize the token as a JWT
 /*
