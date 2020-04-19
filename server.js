@@ -4,24 +4,17 @@ var AccessToken = require("twilio").jwt.AccessToken;
 var VideoGrant = AccessToken.VideoGrant;
 var port = process.env.PORT || 5000;
 
-var ACCOUNT_SID = "ACb117e5ba1426d34171d9b66bffa4f98c";
-var API_KEY_SID = "SK7648e3c0a1a89553b51795101b52e4d6";
-var API_KEY_SECRET = "edYdQeRZYZPb1gVyIuMHLHvBTJ8GmY35";
-
 // Serialize the token as a JWT
-/*
 
-var ACCOUNT_SID = "ACb117e5ba1426d34171d9b66bffa4f98c";
-var API_KEY_SID = "SK7648e3c0a1a89553b51795101b52e4d6";
-var API_KEY_SECRET = "edYdQeRZYZPb1gVyIuMHLHvBTJ8GmY35";
-
-*/
-
-app.get("/jwt/:id/:room/:name", function (req, res) {
+app.get("/jwt/:actSID/:apiSID/:SS/:room/:name", function (req, res) {
   console.log("hello");
   console.log(req.params);
 
-  var accessToken = new AccessToken(ACCOUNT_SID, API_KEY_SID, req.params.id);
+  var ACCOUNT_SID = req.params.actSID;
+  var API_KEY_SID = req.params.apiSID;
+  var API_KEY_SECRET = req.params.SS;
+
+  var accessToken = new AccessToken(ACCOUNT_SID, API_KEY_SID, API_KEY_SECRET);
 
   console.log(accessToken);
 
