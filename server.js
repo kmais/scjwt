@@ -24,7 +24,8 @@ var jwt = accessToken.toJwt();
 console.log(jwt);
 */
 
-app.get("/jwt", function (req, res) {
+app.get("/jwt/:ss/:room/:name", function (req, res) {
+  console.log(req.params);
   var jwt = accessToken.toJwt();
   //console.log(jwt);
   res.send(jwt);
