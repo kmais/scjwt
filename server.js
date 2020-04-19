@@ -17,7 +17,7 @@ var API_KEY_SECRET = "edYdQeRZYZPb1gVyIuMHLHvBTJ8GmY35";
 
 */
 
-app.get("/jwt/:id/:room", function (req, res) {
+app.get("/jwt/:id/:room/:name", function (req, res) {
   console.log("hello");
   console.log(req.params);
 
@@ -26,7 +26,7 @@ app.get("/jwt/:id/:room", function (req, res) {
   console.log(accessToken);
 
   // Set the Identity of this token
-  accessToken.identity = "example-user";
+  accessToken.identity = "req.params.name";
 
   // Grant access to Video
   var grant = new VideoGrant();
