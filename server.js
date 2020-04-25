@@ -7,8 +7,8 @@ var port = process.env.PORT || 5000;
 // Serialize the token as a JWT
 
 app.get("/jwt/:actSID/:apiSID/:SS/:room/:name", function (req, res) {
-      //console.log("hello");
-      //console.log(req.params);
+      console.log("hello -14");
+      console.log(req.params);
 
       var ACCOUNT_SID = req.params.actSID;
       var API_KEY_SID = req.params.apiSID;
