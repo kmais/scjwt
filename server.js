@@ -21,6 +21,7 @@ app.get("/jwt/:actSID/:apiSID/:SS/:room/:name", function (req, res) {
 
       // Set the Identity of this token
       accessToken.identity = req.params.name;
+      accessToken.ttl = ttl;
 
       // Grant access to Video
       var grant = new VideoGrant();
